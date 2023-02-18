@@ -1,16 +1,16 @@
 services:
     web:
-        image: krulaz/bgapp-web
+        image: krulaz/demoapp-web
         deploy:
             replicas: 5
         ports:
             - 8080:80
         volumes:
-            - "/home/vagrant/<app-folder>/web:/var/www/html:ro"
+            - "/home/vagrant/demoapp/web:/var/www/html:ro"
         networks:
             - app-network
     db:
-        image: krulaz/bgapp-db
+        image: krulaz/demoapp-db
         networks:
             - app-network
         environment:
