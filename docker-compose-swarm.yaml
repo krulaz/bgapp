@@ -1,6 +1,6 @@
 services:
     web:
-        image: krulaz/demoapp-web
+        image: krulaz/bgapp-web
         deploy:
             replicas: 5
         ports:
@@ -10,7 +10,7 @@ services:
         networks:
             - app-network
     db:
-        image: krulaz/demoapp-db
+        image: krulaz/bgapp-db
         networks:
             - app-network
         environment:
